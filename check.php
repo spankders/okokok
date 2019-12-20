@@ -21,7 +21,7 @@ function Hotmail($username = NULL, $password = NULL)
 			return json_encode(array('status' => 'false','message' => $e->getMessage()));
         }
     }
-if($_GET['email'] and $_GET['pass']){
-    $ss = json_decode(Hotmail($_GET['email'],$_GET['pass']),true);
+if($_POST['email'] and $_POST['pass']){
+    $ss = json_decode(Hotmail($_POST['email'],$_POST['pass']),true);
     echo $ss['status'];
 }
